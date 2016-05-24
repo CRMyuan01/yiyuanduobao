@@ -8,4 +8,5 @@ class IndexController extends Controller {
         $userList = $userModel->where('user_id=4')->find();
         echo json_encode($userList);
     }
+    
 }

@@ -55,3 +55,932 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+[ 2016-05-24T11:32:29+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014001s ]
+NOTIC: [8] Undefined index: db_dsn D:\wamp\www\ThinkPHP\Library\Think\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wamp\www\ThinkPHP\Library\Think\Db.class.php 第 130 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.006000s ]
+SQL: SELECT * FROM `user` WHERE ( user_id=4 ) LIMIT 1   [ RunTime:0.005000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T11:32:56+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009000s ]
+ERR: 无法加载控制器:User
+
+[ 2016-05-24T11:33:09+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T11:49:43+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-24T11:49:59+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:00+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:00+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:00+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:00+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:01+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:01+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:01+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:01+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:01+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:01+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:02+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:02+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:02+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:02+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:02+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:03+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:03+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:03+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:11+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:12+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:12+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:12+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:12+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:13+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:13+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:13+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:13+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:50:20+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T11:50:21+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T11:50:59+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-24T11:51:04+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Array to string conversion D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 7 行.
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:51:05+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Array to string conversion D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 7 行.
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:51:05+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Array to string conversion D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 7 行.
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:51:05+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Array to string conversion D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 7 行.
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:51:15+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:51:16+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:51:16+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:51:16+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:51:16+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] json_decode() expects parameter 1 to be string, array given D:\wamp\www\Application\Api\Controller\BaseController.class.php 第 8 行.
+
+[ 2016-05-24T11:51:29+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T11:52:33+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-24T11:52:41+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-05-24T11:52:56+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-24T11:53:11+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-24T11:53:11+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T11:53:11+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-24T11:53:12+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-24T11:53:12+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T11:53:12+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-24T11:53:12+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T11:53:12+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-05-24T11:53:12+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T11:53:13+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T11:53:13+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T11:53:13+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T11:53:13+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-24T11:53:13+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-24T11:53:13+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T11:53:14+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T11:53:14+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T11:53:14+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T11:53:14+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T11:53:14+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T11:53:15+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T11:53:15+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T11:53:30+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-05-24T11:53:30+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-24T11:53:30+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T11:53:31+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T11:53:31+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T14:07:30+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:09:28+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:09:29+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:09:29+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:09:29+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:09:30+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:09:34+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-24T14:09:34+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-05-24T14:09:34+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-24T14:09:35+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-24T14:09:35+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T14:09:35+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T14:09:35+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T14:09:35+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T14:09:35+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T14:09:36+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-24T14:09:36+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T14:09:36+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T14:09:36+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-24T14:09:36+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-05-24T14:10:37+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: db_dsn D:\wamp\www\ThinkPHP\Library\Think\Db.class.php 第 129 行.
+NOTIC: [8] Undefined index: db_params D:\wamp\www\ThinkPHP\Library\Think\Db.class.php 第 130 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `user` WHERE ( user_name='yezhicai' )  [ RunTime:0.005000s ]
+SQL: INSERT INTO `user` (`user_name`,`password`,`create_time`) VALUES ('yezhicai','$2y$10$EGk2t1vZMVlEcb3ACDfrM./BU51gz3OoqWN8/1XlZHW8lVs9weOu2',1464070237) [ RunTime:0.200011s ]
+
+[ 2016-05-24T14:11:29+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T14:11:30+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T14:11:34+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:11:34+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:11:35+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:11:35+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:11:35+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:12:44+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:12:45+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:12:45+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:12:46+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:12:46+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:12:46+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:12:46+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:12:46+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:12:47+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:12:47+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:12:47+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:12:47+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:12:48+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:12:48+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:12:48+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:12:48+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:12:48+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:12:49+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:12:49+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:12:49+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:12:49+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:12:50+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:12:50+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:12:50+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:12:51+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 没有定义数据库配置
+
+[ 2016-05-24T14:13:33+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+NOTIC: [8] Undefined variable: BaseObj D:\wamp\www\Application\Api\Controller\UserController.class.php 第 24 行.
+
+[ 2016-05-24T14:14:24+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+
+[ 2016-05-24T15:23:42+08:00 ] 127.0.0.1 /index.php/Api/User/add_record
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-24T15:24:16+08:00 ] 127.0.0.1 /index.php/Api/User/add_record
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+
+[ 2016-05-24T15:24:16+08:00 ] 127.0.0.1 /index.php/Api/User/add_record
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:add_record
+
+[ 2016-05-24T15:24:27+08:00 ] 127.0.0.1 /index.php/Api/User/addrecord
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-24T15:26:29+08:00 ] 127.0.0.1 /index.php/Api/User/addrecord
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: product_id D:\wamp\www\Application\Api\Controller\UserController.class.php 第 64 行.
+
+[ 2016-05-24T15:26:42+08:00 ] 127.0.0.1 /index.php/Api/User/addrecord
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-24T15:28:37+08:00 ] 127.0.0.1 /index.php/Api/User/addrecord
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+
+[ 2016-05-24T15:29:45+08:00 ] 127.0.0.1 /index.php/Api/User/addrecord
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+
+[ 2016-05-24T15:33:08+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+ERR: Think\Controller:renderJson方法不存在！
+
+[ 2016-05-24T15:47:02+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+
+[ 2016-05-24T15:47:26+08:00 ] 127.0.0.1 /index.php/Api/User/regedit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+
+[ 2016-05-24T15:47:30+08:00 ] 127.0.0.1 /index.php/Api/User/addrecord
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+
+[ 2016-05-24T15:58:14+08:00 ] 127.0.0.1 /index.php/Api/User/addrecord
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+NOTIC: [2] Cannot use a scalar value as an array D:\wamp\www\Application\Api\Controller\UserController.class.php 第 79 行.
+NOTIC: [8] Undefined variable: result D:\wamp\www\Application\Api\Model\ProductModel.class.php 第 15 行.
+
+[ 2016-05-24T15:59:00+08:00 ] 127.0.0.1 /index.php/Api/User/addrecord
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+NOTIC: [2] Cannot use a scalar value as an array D:\wamp\www\Application\Api\Controller\UserController.class.php 第 79 行.
+NOTIC: [8] Undefined variable: result D:\wamp\www\Application\Api\Model\ProductModel.class.php 第 15 行.
+
+[ 2016-05-24T16:00:38+08:00 ] 127.0.0.1 /index.php/Api/User/addrecord
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+NOTIC: [8] Undefined variable: proToUpdate D:\wamp\www\Application\Api\Controller\UserController.class.php 第 79 行.
+NOTIC: [8] Undefined index: pending_count D:\wamp\www\Application\Api\Controller\UserController.class.php 第 79 行.
+
+[ 2016-05-24T16:01:04+08:00 ] 127.0.0.1 /index.php/Api/User/addrecord
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+NOTIC: [8] Undefined variable: proToUpdate D:\wamp\www\Application\Api\Controller\UserController.class.php 第 79 行.
+NOTIC: [8] Undefined index: pending_count D:\wamp\www\Application\Api\Controller\UserController.class.php 第 79 行.
+NOTIC: [8] Undefined variable: result D:\wamp\www\Application\Api\Model\ProductModel.class.php 第 15 行.
+
+[ 2016-05-24T16:01:26+08:00 ] 127.0.0.1 /index.php/Api/User/addrecord
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+
+[ 2016-05-24T16:02:16+08:00 ] 127.0.0.1 /index.php/Api/User/addrecord
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+
+[ 2016-05-24T16:11:56+08:00 ] 127.0.0.1 /index.php/Api/User/addrecord
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+NOTIC: [8] Undefined variable: proToUpdate D:\wamp\www\Application\Api\Controller\UserController.class.php 第 80 行.
+NOTIC: [8] Undefined index: pending_count D:\wamp\www\Application\Api\Controller\UserController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: result D:\wamp\www\Application\Api\Model\ProductModel.class.php 第 15 行.
+
+[ 2016-05-24T16:12:58+08:00 ] 127.0.0.1 /index.php/Api/User/addrecord
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+NOTIC: [8] Undefined variable: proToUpdate D:\wamp\www\Application\Api\Controller\UserController.class.php 第 80 行.
+NOTIC: [8] Undefined index: pending_count D:\wamp\www\Application\Api\Controller\UserController.class.php 第 80 行.
+
+[ 2016-05-24T16:13:23+08:00 ] 127.0.0.1 /index.php/Api/User/addrecord
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+NOTIC: [8] Undefined variable: proToUpdate D:\wamp\www\Application\Api\Controller\UserController.class.php 第 80 行.
+NOTIC: [8] Undefined index: pending_count D:\wamp\www\Application\Api\Controller\UserController.class.php 第 80 行.
+
+[ 2016-05-24T16:45:39+08:00 ] 127.0.0.1 /index.php/Api/User/addrecord
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+NOTIC: [8] Undefined variable: proToUpdate D:\wamp\www\Application\Api\Controller\UserController.class.php 第 80 行.
+NOTIC: [8] Undefined index: pending_count D:\wamp\www\Application\Api\Controller\UserController.class.php 第 80 行.
+
+[ 2016-05-24T16:46:03+08:00 ] 127.0.0.1 /index.php/Api/User/addrecord
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+NOTIC: [8] Undefined variable: proToUpdate D:\wamp\www\Application\Api\Controller\UserController.class.php 第 80 行.
+NOTIC: [8] Undefined index: pending_count D:\wamp\www\Application\Api\Controller\UserController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: result D:\wamp\www\Application\Api\Model\ProductModel.class.php 第 15 行.
+
+[ 2016-05-24T16:49:28+08:00 ] 127.0.0.1 /index.php/Api/User/addrecord
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+NOTIC: [8] Undefined variable: result D:\wamp\www\Application\Api\Model\ProductModel.class.php 第 15 行.
+
+[ 2016-05-24T16:50:32+08:00 ] 127.0.0.1 /index.php/Api/User/addrecord
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+
+[ 2016-05-24T16:51:43+08:00 ] 127.0.0.1 /index.php/Api/User/addrecord
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+NOTIC: [8] Undefined variable: result D:\wamp\www\Application\Api\Model\ProductModel.class.php 第 15 行.
+
+[ 2016-05-24T16:52:39+08:00 ] 127.0.0.1 /index.php/Api/User/addrecord
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+NOTIC: [8] Undefined variable: result D:\wamp\www\Application\Api\Model\ProductModel.class.php 第 15 行.
+

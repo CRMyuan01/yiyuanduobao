@@ -1,7 +1,6 @@
 <?php
 return array(
-    'R_DB_CONFIG'               =>
-        array(
+    
         'DB_TYPE'               =>  'mysql',     // 数据库类型
         'DB_HOST'               =>  '124.202.152.242', // 服务器地址42.96.155.8,1888
         'DB_NAME'               =>  'test',          // 数据库名
@@ -21,5 +20,5 @@ return array(
         'DB_SQL_BUILD_LENGTH'   =>  20, // SQL缓存的队列长度
         'DB_SQL_LOG'            =>  false, // SQL执行日志记录
         'DB_BIND_PARAM'         =>  false, // 数据库写入数据自动参数绑定
-    ),
+    
 );
