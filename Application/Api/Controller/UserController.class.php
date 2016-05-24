@@ -1,9 +1,9 @@
-<?php
+﻿<?php
 // 本类由系统自动生成，仅供测试用途
 namespace Api\Controller;
 use Think\Controller;	
 class UserController extends Controller {
-
+//ceshi
      function  regedit(){
      	$BaseObj=new BaseController;
      	$_POST['username']='yezhicai';
