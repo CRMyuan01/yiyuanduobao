@@ -2,22 +2,6 @@
 // 本类由系统自动生成，仅供测试用途
 namespace Api\Controller;
 use Think\Controller;	
-//注册
-define('USER_REGEDIT_SUCCESS','0');
-	define('USER_REGEDIT_ERROR','1');
-	define('USER_REGEDIT_NAMEEXIST','2');
-	//登陆
-	define('USER_LOGIN_SUCCESS','0');
-	define('USER_LOGIN_NOUSER','1');
-	define('USER_LOGIN_PWDERROR','2');
-	//购买商品
-	define('USER_ADDRECORD_SUCCESS','0');
-	define('USER_ADDRECORD_PROOVERMAX','1');
-	define('USER_ADDRECORD_ERROR','2');
-	//所有商品获取
-	define('USER_SHOWPRODECT_SUCCESS','0');
-	define('USER_SHOWPRODECT_ERROR','1');
-
 class UserController extends Controller {
 
      function  regedit(){
@@ -107,7 +91,7 @@ class UserController extends Controller {
     		
     		
     		//获取商品信息
-    		$pro_info=$Product_obj->getAllProduct($info['product_id']);
+    		$pro_info=$Product_obj->getAllProduct();
     		if ($pro_info) {
     			$BaseObj->renderJson(USER_SHOWPRODECT_SUCCESS,'所有商品获取成功',$pro_info);
     		}else{
@@ -118,23 +102,6 @@ class UserController extends Controller {
 
         }
 
-		//用户购买记录
-        function showprodect(){
-        	$BaseObj=new BaseController;
-    		$Product_obj = new \Api\Model\ProductModel();
-    		
-    		
-    		//获取商品信息
-    		$pro_info=$Product_obj->getAllProduct($info['product_id']);
-    		if ($pro_info) {
-    			$BaseObj->renderJson(USER_SHOWPRODECT_SUCCESS,'所有商品获取成功',$pro_info);
-    		}else{
-
-    			$BaseObj->renderJson(USER_SHOWPRODECT_ERROR,'所有商品获取失败');
-    		}
-    	
-
-        }*/
 
 
 }

@@ -17,7 +17,21 @@ if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP > 5.3.0 !');
 // 开启调试模式 建议开发阶段开启 部署阶段注释或者设为false
 define('APP_DEBUG',True);
 
-
+//注册
+define('USER_REGEDIT_SUCCESS','0');
+define('USER_REGEDIT_ERROR','1');
+define('USER_REGEDIT_NAMEEXIST','2');
+//登陆
+define('USER_LOGIN_SUCCESS','0');
+define('USER_LOGIN_NOUSER','1');
+define('USER_LOGIN_PWDERROR','2');
+//购买商品
+define('USER_ADDRECORD_SUCCESS','0');
+define('USER_ADDRECORD_PROOVERMAX','1');
+define('USER_ADDRECORD_ERROR','2');
+//所有商品获取
+define('USER_SHOWPRODECT_SUCCESS','0');
+define('USER_SHOWPRODECT_ERROR','1');
 // 定义应用目录
 define('APP_PATH','./Application/');
 
