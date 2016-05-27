@@ -9,7 +9,7 @@ class UserController extends Controller {
    		
         $table=D('user');
         $info['user_name']=$_POST['username'];
-        $info['password']=password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $info['password']=md5($_POST['password']);
         $info['create_time']=time();
         //检测用户名是否存在
         $result=$table->where("user_name='".$info['user_name']."'")->select();
@@ -41,7 +41,7 @@ class UserController extends Controller {
             $BaseObj->renderJson(USER_LOGIN_NOUSER,'用户名不存在');
         }
         //判断密码是否正确
-        if (password_verify ( $info['password'], $result['0']['password'] )) {
+        if (md5($info['password'])==$result['0']['password']) {
             $BaseObj->renderJson(USER_LOGIN_SUCCESS,'登陆成功',$result['0']);
         }else{
             $BaseObj->renderJson(USER_LOGIN_PWDERROR,'密码错误');
@@ -153,7 +153,7 @@ class UserController extends Controller {
               $Buycar_obj = new \Api\Model\BuycarModel();
             $buycarInfo=$Buycar_obj->selectinfo($where);//查询购物车中该商品id的信息
             $delbuycarInfo=$Buycar_obj->delinfo($where);//删除购物车中该商品id的信息
-            
+
             $Record_obj = new \Api\Model\RecordModel();
             //将商品信息插入购买记录表
             foreach ($buycarInfo as $key1 => $value1) {
