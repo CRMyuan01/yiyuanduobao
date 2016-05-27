@@ -1,9 +1,7 @@
-﻿<?php
-// 本类由系统自动生成，仅供测试用途
+<?php
 namespace Api\Controller;
 use Think\Controller;	
 class UserController extends Controller {
-//ceshi
      function  regedit(){
      	$BaseObj=new BaseController;
      	$_POST['username']='yezhicai';
@@ -101,7 +99,97 @@ class UserController extends Controller {
     	
 
         }
+        //添加购物车
+        function addToBuyCar(){
+            $BaseObj=new BaseController;
+            $info=array('product_id'=>1000377,'user_id'=>267098,'count'=>3);
+            $Buycar_obj = new \Api\Model\BuycarModel();
+            //判断购物车里面是否已经有这个商品
+            $isexist=$Buycar_obj->selectinfo(array('product_id'=>$info['product_id'],'user_id'=>$info['user_id']));
+            //如果存在就更新count字段,不存在就新增
+            if ($isexist) {
+                $returnNum=$Buycar_obj->updateinfo(array('count'=>$info['count']+$isexist['0']['count']),array('product_id'=>$info['product_id'],'user_id'=>$info['user_id']));
+            }else{
+                $returnNum=$Buycar_obj->addinfo($info);
+            }
 
+            if ($returnNum) {
+                $BaseObj->renderJson(USER_ADDBUYCAR_SUCCESS,'购物车商品添加成功');
+            }else{
+                $BaseObj->renderJson(USER_ADDBUYCAR_ERROR,'购物车商品添加失败');
+            }
+
+        }
+
+
+        function showBuyCar(){
+            $BaseObj=new BaseController;
+            $info=array('user_id'=>267098);
+            $Buycar_obj = new \Api\Model\BuycarModel();
+            $buycarInfo=$Buycar_obj->selectinfo(array('user_id'=>$info['user_id']));
+            foreach($buycarInfo as $key=>$value){
+                $Product_obj = new \Api\Model\ProductModel();
+                $pro_info=$Product_obj->GetProductInfoByProid($value['product_id']);
+                $returnArr[$key]=array('count'=>$value['count'],'product_id'=>$value['product_id'],'user_id'=>$value['user_id'],'product_name'=>$pro_info['product_name'],'image_url'=>$pro_info['image_url']);
+                
+            }
+            $BaseObj->renderJson(USER_SHOWBUYCAR_SUCCESS,'购物车展示成功',$returnArr);
+        }
+        function payOfBuyCar(){
+            $BaseObj=new BaseController;
+            $info=array('product_id'=>'1000377,1000378','user_id'=>267098);
+            //获取需要结账的商品id
+            $product_id=explode(',',$info['product_id']);
+            $where=0;
+            foreach($product_id as $key => $value){
+                if($where===0){
+                    $where='(product_id='.$value;
+                }else{
+                    $where.=' or product_id='.$value;
+                }
+            }
+            $where.=') and user_id="'.$info['user_id'].'"';
+
+              $Buycar_obj = new \Api\Model\BuycarModel();
+            $buycarInfo=$Buycar_obj->selectinfo($where);//查询购物车中该商品id的信息
+            $delbuycarInfo=$Buycar_obj->delinfo($where);//删除购物车中该商品id的信息
+            
+            $Record_obj = new \Api\Model\RecordModel();
+            //将商品信息插入购买记录表
+            foreach ($buycarInfo as $key1 => $value1) {
+                $rec_info = array('user_id' =>$value1['user_id'] ,'product_id'=>$value1['product_id'],'count'=>$value1['count'] );
+                $b=$Record_obj->addRecord($rec_info);
+            }
+            if ($b) {
+                $BaseObj->renderJson(USER_PAYBUYCAR_SUCCESS,'购物车付款成功');
+            }else{
+                $BaseObj->renderJson(USER_PAYBUYCAR_ERROR,'购物车付款失败');
+            }
+          
+            
+        }
+        function updateCountBuyCar(){
+            $BaseObj=new BaseController;
+            $info=array('product_id'=>1000377,'user_id'=>267098,'count'=>3);
+            $Buycar_obj = new \Api\Model\BuycarModel();
+            $returnNum=$Buycar_obj->updateinfo(array('count'=>$info['count']),array('product_id'=>$info['product_id'],'user_id'=>$info['user_id']));
+            if ($returnNum) {
+                $BaseObj->renderJson(USER_UPDATECOUNTBUYCAR_SUCCESS,'商品数量更新成功');
+            }else{
+                $BaseObj->renderJson(USER_UPDATECOUNTBUYCAR_ERROR,'商品数量更新失败');
+            }
+        }
+        function deleteBuyCar(){
+            $BaseObj=new BaseController; 
+            $info=array('product_id'=>1000377,'user_id'=>267098);
+            $Buycar_obj = new \Api\Model\BuycarModel();
+            $returnNum=$Buycar_obj->delinfo('product_id="'.$info['product_id'].'" and user_id="'.$info['user_id'].'"');
+            if ($returnNum) {
+                $BaseObj->renderJson(USER_DELBUYCAR_SUCCESS,'购物车删除成功');
+            }else{
+                $BaseObj->renderJson(USER_DELBUYCAR_ERROR,'购物车删除成功');
+            }
+        }
 
 
 }

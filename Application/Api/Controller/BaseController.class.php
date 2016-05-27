@@ -8,5 +8,8 @@ class BaseController extends Controller {
         echo json_encode($ReturnInfo);
         die;
     }
+    public function show(){//echo $msg;die;
+        echo 123;
+    }
     
 }

@@ -32,6 +32,20 @@ define('USER_ADDRECORD_ERROR','2');
 //所有商品获取
 define('USER_SHOWPRODECT_SUCCESS','0');
 define('USER_SHOWPRODECT_ERROR','1');
+//购物车商品添加
+define('USER_ADDBUYCAR_SUCCESS','0');
+define('USER_ADDBUYCAR_ERROR','1');
+//购物车商品添加
+define('USER_SHOWBUYCAR_SUCCESS','0');
+//购物车商品数量更新
+define('USER_UPDATECOUNTBUYCAR_SUCCESS','0');
+define('USER_UPDATECOUNTBUYCAR_ERROR','1');
+//购物车商品删除
+define('USER_DELBUYCAR_SUCCESS','0');
+define('USER_DELBUYCAR_ERROR','1');
+//购物车付款
+define('USER_PAYBUYCAR_SUCCESS','0');
+define('USER_PAYBUYCAR_ERROR','1');
 // 定义应用目录
 define('APP_PATH','./Application/');
 
