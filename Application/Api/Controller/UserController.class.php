@@ -19,6 +19,7 @@ class UserController extends Controller {
        	//新增用户
         $table->create($info);
         $a=$table->add();
+        $info['id']=$a;
        	if ($a) {
        		$BaseObj=new BaseController;
        		$BaseObj->renderJson(USER_REGEDIT_SUCCESS,'注册成功',$info);
