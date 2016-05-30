@@ -4,11 +4,11 @@ use Think\Controller;
 class UserController extends BaseController {
      function  regedit(){
      	
-     	$_POST['username']='yezhicai1';
-     	$_POST['password']='yezhicai';
+     	//$_POST['username']='yezhicai1';
+     	//$_POST['password']='yezhicai';
    		
         $table=D('user');
-        $info['user_name']=$_POST['username'];
+        $info['user_name']=$_POST['name'];
         $info['password']=md5($_POST['password']);
         $info['create_time']=time();
         //检测用户名是否存在
@@ -43,7 +43,7 @@ class UserController extends BaseController {
         }
         //判断密码是否正确
         if (md5($info['password'])==$result['0']['password']) {
-            $this->renderJson(USER_LOGIN_SUCCESS,'登陆成功',$result['0']);
+            $this->renderJson(USER_LOGIN_SUCCESS,'登陆成功',$result);
         }else{
             $this->renderJson(USER_LOGIN_PWDERROR,'密码错误');
         }
