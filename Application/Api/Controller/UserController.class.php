@@ -29,6 +29,17 @@ class UserController extends BaseController {
        	}
        
     }
+    //通过id获取用户信息
+    function getUserInfo(){
+        $info['user_id']=6;
+        $user_obj = new \Api\Model\UserModel();
+        $UserInfo=$user_obj->getUserInfoById($info['user_id']);
+        if ($UserInfo) {
+            $this->renderJson(USER_GETUSERINFO_SUCCESS,'用户信息获取成功',$UserInfo);
+        }else{
+            $this->renderJson(USER_GETUSERINFO_ERROR,'用户信息获取失败');
+        }
+    }
 
     function login(){
        

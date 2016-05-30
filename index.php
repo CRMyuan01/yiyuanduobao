@@ -46,6 +46,9 @@ define('USER_DELBUYCAR_ERROR','1');
 //购物车付款
 define('USER_PAYBUYCAR_SUCCESS','0');
 define('USER_PAYBUYCAR_ERROR','1');
+//用户信息获取
+define('USER_GETUSERINFO_SUCCESS','0');
+define('USER_GETUSERINFO_ERROR','1');
 // 定义应用目录
 define('APP_PATH','./Application/');
 
