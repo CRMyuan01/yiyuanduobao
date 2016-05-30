@@ -3,7 +3,15 @@
 namespace Api\Controller;
 use Think\Controller;
 class IndexController extends Controller {
+
+    public function  index(){
+
+        echo "22377";
+
+    }
     public function draw(){
+        echo "23";
+        die();
         $Model = new \Think\Model();
         $proResult=$Model->query("SELECT * FROM product t WHERE t.`max_reserver_number`=t.`pending_count` and t.status=1");
         foreach ($proResult as $key => $value) {
