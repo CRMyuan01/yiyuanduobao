@@ -4,7 +4,7 @@ use Think\Controller;
 class UserController extends BaseController {
      function  regedit(){
      	
-     	$_POST['username']='yezhicai';
+     	$_POST['username']='yezhicai1';
      	$_POST['password']='yezhicai';
    		
         $table=D('user');
@@ -14,7 +14,7 @@ class UserController extends BaseController {
         //检测用户名是否存在
         $result=$table->where("user_name='".$info['user_name']."'")->select();
         if ($result) {
-            $BaseObj->renderJson(USER_REGEDIT_NAMEEXIST,'用户名已存在');
+            $this->renderJson(USER_REGEDIT_NAMEEXIST,'用户名已存在');
         }
        	//新增用户
         $table->create($info);
@@ -39,7 +39,7 @@ class UserController extends BaseController {
         //检测用户名是否存在
         $result=$table->where("user_name='".$info['user_name']."'")->select();
         if (!$result) {
-            $BaseObj->renderJson(USER_LOGIN_NOUSER,'用户名不存在');
+            $this->renderJson(USER_LOGIN_NOUSER,'用户名不存在');
         }
         //判断密码是否正确
         if (md5($info['password'])==$result['0']['password']) {
