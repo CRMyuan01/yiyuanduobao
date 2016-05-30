@@ -4,7 +4,7 @@ use Think\Controller;
 class UserController extends Controller {
      function  regedit(){
      	$BaseObj=new BaseController;
-     	$_POST['username']='yezhicai';
+     	$_POST['username']='yezhicai2';
      	$_POST['password']='yezhicai';
    		
         $table=D('user');
