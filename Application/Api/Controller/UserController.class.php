@@ -21,7 +21,7 @@ class UserController extends Controller {
         $a=$table->add();
        	if ($a) {
        		$BaseObj=new BaseController;
-       		$BaseObj->renderJson(USER_REGEDIT_SUCCESS,'注册成功');
+       		$BaseObj->renderJson(USER_REGEDIT_SUCCESS,'注册成功',$info);
        	}else{
        		$BaseObj=new BaseController;
        		$BaseObj->renderJson(USER_REGEDIT_ERROR,'注册失败');
