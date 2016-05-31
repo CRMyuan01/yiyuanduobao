@@ -216,13 +216,10 @@ class UserController extends BaseController {
                 }
             }
 
-
+$this->renderJson(USER_PAYBUYCAR_SUCCESS,'购物车付款成功');
             }
-                $this->renderJson(USER_PAYBUYCAR_SUCCESS,'购物车付款成功');
-            }
-          
-            
-        }
+                
+      
         function updateCountBuyCar(){
             
             $info=array('product_id'=>1000377,'user_id'=>267098,'count'=>3);
