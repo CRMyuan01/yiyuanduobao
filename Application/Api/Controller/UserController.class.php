@@ -144,7 +144,7 @@ class UserController extends BaseController {
             foreach($buycarInfo as $key=>$value){
                 $Product_obj = new \Api\Model\ProductModel();
                 $pro_info=$Product_obj->GetProductInfoByProid($value['product_id']);
-                $returnArr[$key]=array('count'=>$value['count'],'product_id'=>$value['product_id'],'user_id'=>$value['user_id'],'product_name'=>$pro_info['product_name'],'image_url'=>$pro_info['image_url']);
+                $returnArr[$key]=array('price'=>$value['price'],'count'=>$value['count'],'product_id'=>$value['product_id'],'user_id'=>$value['user_id'],'product_name'=>$pro_info['product_name'],'image_url'=>$pro_info['image_url']);
                 
             }
             $this->renderJson(USER_SHOWBUYCAR_SUCCESS,'购物车展示成功',$returnArr);
