@@ -138,7 +138,7 @@ class UserController extends BaseController {
 
         function showBuyCar(){
             
-            $info=array('user_id'=>267098);
+            $info=array('user_id'=>$_POST["uid"]);
             $Buycar_obj = new \Api\Model\BuycarModel();
             $buycarInfo=$Buycar_obj->selectinfo(array('user_id'=>$info['user_id']));
             foreach($buycarInfo as $key=>$value){
@@ -151,8 +151,8 @@ class UserController extends BaseController {
         }
         function showBuyCarCount(){
             
-            $info=array('user_id'=>267098);
-
+            $info=array('user_id'=>$_REQUEST['userid']);
+            $count =0;
             $Buycar_obj = new \Api\Model\BuycarModel();
             $buycarInfo=$Buycar_obj->selectinfo(array('user_id'=>$info['user_id']));
             foreach($buycarInfo as $key=>$value){
