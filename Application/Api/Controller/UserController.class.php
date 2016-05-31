@@ -149,6 +149,19 @@ class UserController extends BaseController {
             }
             $this->renderJson(USER_SHOWBUYCAR_SUCCESS,'购物车展示成功',$returnArr);
         }
+        function showBuyCarCount(){
+            
+            $info=array('user_id'=>267098);
+            $Buycar_obj = new \Api\Model\BuycarModel();
+            $buycarInfo=$Buycar_obj->selectinfo(array('user_id'=>$info['user_id']));
+            foreach($buycarInfo as $key=>$value){
+                $Product_obj = new \Api\Model\ProductModel();
+                $pro_info=$Product_obj->GetProductInfoByProid($value['product_id']);
+                $returnArr[$key]=array('count'=>$value['count']);
+                
+            }
+            $this->renderJson(USER_SHOWBUYCAR_SUCCESS,'购物车展示成功',$returnArr);
+        }
         function payOfBuyCar(){
             
             $info=array('product_id'=>'1000377,1000378','user_id'=>267098);
