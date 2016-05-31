@@ -152,6 +152,7 @@ class UserController extends BaseController {
         function showBuyCarCount(){
             
             $info=array('user_id'=>267098);
+
             $Buycar_obj = new \Api\Model\BuycarModel();
             $buycarInfo=$Buycar_obj->selectinfo(array('user_id'=>$info['user_id']));
             foreach($buycarInfo as $key=>$value){
