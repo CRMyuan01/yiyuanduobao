@@ -31,7 +31,7 @@ class UserController extends BaseController {
     }
     //通过id获取用户信息
     function getUserInfo(){
-        $info['user_id']=12;
+        $info['user_id']=$_REQUEST['userid'];
         $user_obj = new \Api\Model\UserModel();
         $UserInfo=$user_obj->getUserInfoById($info['user_id']);
         if ($UserInfo) {
@@ -63,9 +63,9 @@ class UserController extends BaseController {
 
         function addrecord(){
         	
-    		$info['product_id']=1000377;
-    		$info['user_id']=267098;
-    		$info['count']=6;
+    		$info['product_id']=$_POST['proid'];
+    		$info['user_id']=$_POST['uid'];;
+    		$info['count']=1;
     		$Product_obj = new \Api\Model\ProductModel();
     		$Record_obj = new \Api\Model\RecordModel();
     		
@@ -114,7 +114,7 @@ class UserController extends BaseController {
         //添加购物车
         function addToBuyCar(){
             
-            $info=array('product_id'=>1000377,'user_id'=>267098,'count'=>3);
+            $info=array('product_id'=>$_POST['proid'],'user_id'=>$_POST['uid'],'count'=>1);
             $Buycar_obj = new \Api\Model\BuycarModel();
             //判断购物车里面是否已经有这个商品
             $isexist=$Buycar_obj->selectinfo(array('product_id'=>$info['product_id'],'user_id'=>$info['user_id']));
