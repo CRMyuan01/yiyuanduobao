@@ -9,9 +9,9 @@
             return $result['0'];
             
         }
-        function getAllProduct(){
+        function getAllProduct($limit=0){
             $pro_table=D('product');
-            $result=$pro_table->select();
+            $result=$pro_table->limit($limit.",10")->select();
             return $result;
             
         }
