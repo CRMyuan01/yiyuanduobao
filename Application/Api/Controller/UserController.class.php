@@ -235,14 +235,19 @@ $this->renderJson(USER_PAYBUYCAR_SUCCESS,'购物车付款成功');
         }
         function deleteBuyCar(){
             
-            $info=array('product_id'=>1000377,'user_id'=>267098);
+            $productid="1000401,1000402";
+            $ArrProductId=explode(",",$productid);
+            $userid=9;
             $Buycar_obj = new \Api\Model\BuycarModel();
-            $returnNum=$Buycar_obj->delinfo('product_id="'.$info['product_id'].'" and user_id="'.$info['user_id'].'"');
-            if ($returnNum) {
+            foreach($ArrProductId as $key=>$value){
+            $Buycar_obj->delinfo('product_id="'.$value.'" and user_id="'.$userid.'"');
+
+        }
+         
                 $this->renderJson(USER_DELBUYCAR_SUCCESS,'购物车删除成功');
-            }else{
-                $this->renderJson(USER_DELBUYCAR_ERROR,'购物车删除成功');
-            }
+        
+             
+           
         }
 
 
