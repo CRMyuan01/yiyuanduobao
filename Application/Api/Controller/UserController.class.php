@@ -31,7 +31,7 @@ class UserController extends BaseController {
     }
     //通过id获取用户信息
     function getUserInfo(){
-        $info['user_id']=6;
+        $info['user_id']=12;
         $user_obj = new \Api\Model\UserModel();
         $UserInfo=$user_obj->getUserInfoById($info['user_id']);
         if ($UserInfo) {
