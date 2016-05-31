@@ -96,12 +96,13 @@ class UserController extends BaseController {
         }
 		//获取所有展示商品
         function showprodect(){
-        	
+        	$info['page']=0;
     		$Product_obj = new \Api\Model\ProductModel();
     		
     		
     		//获取商品信息
-    		$pro_info=$Product_obj->getAllProduct();
+    		$pro_info=$Product_obj->getAllProduct($info['page']);
+           // var_dump($pro_info);die;
     		if ($pro_info) {
     			$this->renderJson(USER_SHOWPRODECT_SUCCESS,'所有商品获取成功',$pro_info);
     		}else{
