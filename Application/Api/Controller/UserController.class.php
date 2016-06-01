@@ -140,7 +140,7 @@ class UserController extends BaseController {
 
         function showBuyCar(){
             
-            $info=array('user_id'=>$_REQUEST['userid']);
+            $info=array('user_id'=>$_REQUEST['uid']);
 
             $Buycar_obj = new \Api\Model\BuycarModel();
             $buycarInfo=$Buycar_obj->selectinfo(array('user_id'=>$info['user_id']));
@@ -174,7 +174,7 @@ class UserController extends BaseController {
 
         function payOfBuyCar(){
             
-            $info=array('product_id'=>'1000377,1000378','user_id'=>267098);
+            $info=array('product_id'=>$_POST['proid'],'user_id'=>$_POST['uid']);
             //获取需要结账的商品id
             $product_id=explode(',',$info['product_id']);
             $where=0;
@@ -233,7 +233,7 @@ $this->renderJson(USER_PAYBUYCAR_SUCCESS,'购物车付款成功',$pro_info);
       
         function updateCountBuyCar(){
             
-            $info=array('product_id'=>1000377,'user_id'=>267098,'count'=>3);
+            $info=array('product_id'=>$_POST['proid'],'user_id'=>$_POST['uid'],'count'=>$_POST['count']);
             $Buycar_obj = new \Api\Model\BuycarModel();
             $returnNum=$Buycar_obj->updateinfo(array('count'=>$info['count']),array('product_id'=>$info['product_id'],'user_id'=>$info['user_id']));
             if ($returnNum) {
