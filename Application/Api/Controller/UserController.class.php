@@ -71,9 +71,11 @@ class UserController extends BaseController {
     		
     		//获取商品信息
     		$pro_info=$Product_obj->GetProductInfoByProid($info['product_id']);
+            $info['orderid']=time();
+            $info['sumprice']=$pro_info['sprice']*$info['count'];
     		//判断该用户购买量是否超过预约总量
     		if ($pro_info['pending_count']+$info['count']>$pro_info['max_reserver_number']) {
-                $info['sumprice']=$pro_info['sprice']*$info['count'];
+                
     			$this->renderJson(USER_ADDRECORD_PROOVERMAX,'用户购买数量超过商品的最大预约数');
     		}else{
     			//添加预约信息
@@ -90,7 +92,7 @@ class UserController extends BaseController {
 					}
 					//更新商品信息
 					$Product_obj->UpdateProductInfo($proToUpdate,$where);
-					$this->renderJson(USER_ADDRECORD_SUCCESS,'用户购买成功',$pro_info);
+					$this->renderJson(USER_ADDRECORD_SUCCESS,'用户购买成功',$info['orderid']);
 				}else{
 					$this->renderJson(USER_ADDRECORD_ERROR,'用户购买失败');
 				}
@@ -174,7 +176,8 @@ class UserController extends BaseController {
 
         function payOfBuyCar(){
             
-            $info=array('product_id'=>$_POST['proid'],'user_id'=>$_POST['uid']);
+            $info=array('product_id'=>'1000401','user_id'=>9);
+
             //获取需要结账的商品id
             $product_id=explode(',',$info['product_id']);
             $where=0;
@@ -191,6 +194,7 @@ class UserController extends BaseController {
             $buycarInfo=$Buycar_obj->selectinfo($where);//查询购物车中该商品id的信息
             $delbuycarInfo=$Buycar_obj->delinfo($where);//删除购物车中该商品id的信息
             $Record_obj = new \Api\Model\RecordModel();
+            $info['orderid']=time();
             //将商品信息插入购买记录表
             foreach ($buycarInfo as $key1 => $value1) {
 
@@ -205,10 +209,11 @@ class UserController extends BaseController {
             $pro_info=$Product_obj->GetProductInfoByProid($info['product_id']);
             //判断该用户购买量是否超过预约总量
             if ($pro_info['pending_count']+$info['count']>$pro_info['max_reserver_number']) {
-                $info['sumprice']=$pro_info['sprice']*$info['count'];
+                
                 $this->renderJson(USER_ADDRECORD_PROOVERMAX,'用户购买数量超过商品的最大预约数');
             }else{
                 //添加预约信息
+                $info['sumprice']=$pro_info['sprice']*$info['count'];
                 $b=$Record_obj->addRecord($info);
                 if ($b) {
                     $proToUpdate['pending_count']=$pro_info['pending_count']+$info['count'];
@@ -221,7 +226,7 @@ class UserController extends BaseController {
                         $proToUpdate['status']=1;
                     }
                     //更新商品信息
-                    $Product_obj->UpdateProductInfo($proToUpdate,$where);
+                    $Product_obj->UpdateProductInfo($proToUpdate,$info['orderid']);
                     
                 }
                 }
@@ -229,6 +234,8 @@ class UserController extends BaseController {
 
 $this->renderJson(USER_PAYBUYCAR_SUCCESS,'购物车付款成功',$pro_info);
             }
+            //通过orderid,userid返回商品信息
+        
                 
       
         function updateCountBuyCar(){
