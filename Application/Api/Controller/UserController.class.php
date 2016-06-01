@@ -140,7 +140,7 @@ class UserController extends BaseController {
 
         function showBuyCar(){
             
-            $info=array('user_id'=>$_REQUEST['userid']);
+            $info=array('user_id'=>$_REQUEST['uid']);
             $Buycar_obj = new \Api\Model\BuycarModel();
             $buycarInfo=$Buycar_obj->selectinfo(array('user_id'=>$info['user_id']));
             if($buycarInfo){
@@ -211,7 +211,7 @@ class UserController extends BaseController {
                 $b=$Record_obj->addRecord($info);
                 if ($b) {
                     $proToUpdate['pending_count']=$pro_info['pending_count']+$info['count'];
-                    $proToUpdate['storage']=$pro_info['storage']-$info['count'];
+                    //$proToUpdate['storage']=$pro_info['storage']-$info['count'];
                     $where='product_code='.$info['product_id'];
                     $pro_info['sumprice']=$info['sumprice'];
                     $pro_info['count']=$info['count'];
