@@ -71,7 +71,7 @@ class UserController extends BaseController {
     		
     		//获取商品信息
     		$pro_info=$Product_obj->GetProductInfoByProid($info['product_id']);
-            $info['orderid']=time();
+            $info['recordid']=time();
             $info['sumprice']=$pro_info['sprice']*$info['count'];
     		//判断该用户购买量是否超过预约总量
     		if ($pro_info['pending_count']+$info['count']>$pro_info['max_reserver_number']) {
@@ -92,7 +92,7 @@ class UserController extends BaseController {
 					}
 					//更新商品信息
 					$Product_obj->UpdateProductInfo($proToUpdate,$where);
-					$this->renderJson(USER_ADDRECORD_SUCCESS,'用户购买成功',$info['orderid']);
+					$this->renderJson(USER_ADDRECORD_SUCCESS,'用户购买成功',$info['recordid']);
 				}else{
 					$this->renderJson(USER_ADDRECORD_ERROR,'用户购买失败');
 				}
@@ -176,7 +176,7 @@ class UserController extends BaseController {
 
         function payOfBuyCar(){
             
-            $info=array('product_id'=>'1000401','user_id'=>9);
+            $info=array('product_id'=>'1000400,1000402','user_id'=>9);
 
             //获取需要结账的商品id
             $product_id=explode(',',$info['product_id']);
@@ -194,7 +194,8 @@ class UserController extends BaseController {
             $buycarInfo=$Buycar_obj->selectinfo($where);//查询购物车中该商品id的信息
             $delbuycarInfo=$Buycar_obj->delinfo($where);//删除购物车中该商品id的信息
             $Record_obj = new \Api\Model\RecordModel();
-            $info['orderid']=time();
+            
+
             //将商品信息插入购买记录表
             foreach ($buycarInfo as $key1 => $value1) {
 
@@ -214,6 +215,7 @@ class UserController extends BaseController {
             }else{
                 //添加预约信息
                 $info['sumprice']=$pro_info['sprice']*$info['count'];
+                $info['recordid']=time();
                 $b=$Record_obj->addRecord($info);
                 if ($b) {
                     $proToUpdate['pending_count']=$pro_info['pending_count']+$info['count'];
@@ -226,16 +228,33 @@ class UserController extends BaseController {
                         $proToUpdate['status']=1;
                     }
                     //更新商品信息
-                    $Product_obj->UpdateProductInfo($proToUpdate,$info['orderid']);
+                    $Product_obj->UpdateProductInfo($proToUpdate,$info['recordid']);
                     
                 }
                 }
             }
 
-$this->renderJson(USER_PAYBUYCAR_SUCCESS,'购物车付款成功',$pro_info);
+            $this->renderJson(USER_PAYBUYCAR_SUCCESS,'购物车付款成功',$pro_info);
             }
-            //通过orderid,userid返回商品信息
-        
+            //通过recordid,userid返回商品信息
+            function getInfoByRecordId(){
+                $info=array('recordid'=>'1464773338','user_id'=>9);
+                $Record_obj = new \Api\Model\RecordModel();
+            
+            //获取商品信息
+                $pro_info=$Record_obj->GetProductInfoByRecordid($info);
+                $Product_obj = new \Api\Model\ProductModel();
+                foreach ($pro_info as $key => $value) {
+                    $info=$Product_obj->GetProductInfoByProid($value['product_id']);
+                    
+                    $pro_info[$key]['productinfo']=$info;
+
+
+                }
+                
+                $this->renderJson(USER_SHOWPRODECT_SUCCESS,'商品返回成功',$pro_info);
+
+            }
                 
       
         function updateCountBuyCar(){
