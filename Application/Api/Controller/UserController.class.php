@@ -73,7 +73,7 @@ class UserController extends BaseController {
     		$pro_info=$Product_obj->GetProductInfoByProid($info['product_id']);
     		//判断该用户购买量是否超过预约总量
     		if ($pro_info['pending_count']+$info['count']>$pro_info['max_reserver_number']) {
-
+                $info['sumprice']=$pro_info['sprice']*$info['count'];
     			$this->renderJson(USER_ADDRECORD_PROOVERMAX,'用户购买数量超过商品的最大预约数');
     		}else{
     			//添加预约信息
@@ -82,13 +82,15 @@ class UserController extends BaseController {
 					$proToUpdate['pending_count']=$pro_info['pending_count']+$info['count'];
                     $proToUpdate['storage']=$pro_info['storage']-$info['count'];
 					$where='product_code='.$info['product_id'];
+                    $pro_info['sumprice']=$info['sumprice'];
+                    $pro_info['count']=$info['count'];
 					//判断用户购买之后是否刚满预约总量,如果是更新字段status
 					if ($proToUpdate['pending_count']==$pro_info['max_reserver_number']) {
 						$proToUpdate['status']=1;
 					}
 					//更新商品信息
 					$Product_obj->UpdateProductInfo($proToUpdate,$where);
-					$this->renderJson(USER_ADDRECORD_SUCCESS,'用户购买成功');
+					$this->renderJson(USER_ADDRECORD_SUCCESS,'用户购买成功',$pro_info);
 				}else{
 					$this->renderJson(USER_ADDRECORD_ERROR,'用户购买失败');
 				}
@@ -142,13 +144,16 @@ class UserController extends BaseController {
 
             $Buycar_obj = new \Api\Model\BuycarModel();
             $buycarInfo=$Buycar_obj->selectinfo(array('user_id'=>$info['user_id']));
+            if($buycarInfo){
             foreach($buycarInfo as $key=>$value){
                 $Product_obj = new \Api\Model\ProductModel();
                 $pro_info=$Product_obj->GetProductInfoByProid($value['product_id']);
                 $returnArr[$key]=array('price'=>$pro_info['price'],'count'=>$value['count'],'product_id'=>$value['product_id'],'user_id'=>$value['user_id'],'product_name'=>$pro_info['product_name'],'image_url'=>$pro_info['image_url']);
-                
+                $this->renderJson(USER_SHOWBUYCAR_SUCCESS,'购物车展示成功',$returnArr);
+            }}else{
+                $this->renderJson(USER_SHOWBUYCAR_SUCCESS,'购物车展示成功');
             }
-            $this->renderJson(USER_SHOWBUYCAR_SUCCESS,'购物车展示成功',$returnArr);
+            
         }
         function showBuyCarCount(){
             
@@ -199,7 +204,7 @@ class UserController extends BaseController {
             $pro_info=$Product_obj->GetProductInfoByProid($info['product_id']);
             //判断该用户购买量是否超过预约总量
             if ($pro_info['pending_count']+$info['count']>$pro_info['max_reserver_number']) {
-
+                $info['sumprice']=$pro_info['sprice']*$info['count'];
                 $this->renderJson(USER_ADDRECORD_PROOVERMAX,'用户购买数量超过商品的最大预约数');
             }else{
                 //添加预约信息
@@ -208,6 +213,8 @@ class UserController extends BaseController {
                     $proToUpdate['pending_count']=$pro_info['pending_count']+$info['count'];
                     $proToUpdate['storage']=$pro_info['storage']-$info['count'];
                     $where='product_code='.$info['product_id'];
+                    $pro_info['sumprice']=$info['sumprice'];
+                    $pro_info['count']=$info['count'];
                     //判断用户购买之后是否刚满预约总量,如果是更新字段status
                     if ($proToUpdate['pending_count']==$pro_info['max_reserver_number']) {
                         $proToUpdate['status']=1;
@@ -219,7 +226,7 @@ class UserController extends BaseController {
                 }
             }
 
-$this->renderJson(USER_PAYBUYCAR_SUCCESS,'购物车付款成功');
+$this->renderJson(USER_PAYBUYCAR_SUCCESS,'购物车付款成功',$pro_info);
             }
                 
       
@@ -250,6 +257,6 @@ $this->renderJson(USER_PAYBUYCAR_SUCCESS,'购物车付款成功');
              
            
         }
-
+789465
 
 }
