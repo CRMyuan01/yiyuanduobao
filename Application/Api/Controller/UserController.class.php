@@ -73,7 +73,7 @@ class UserController extends BaseController {
     		$pro_info=$Product_obj->GetProductInfoByProid($info['product_id']);
     		//判断该用户购买量是否超过预约总量
     		if ($pro_info['pending_count']+$info['count']>$pro_info['max_reserver_number']) {
-
+                $info['sumprice']=$pro_info['sprice']*$info['count'];
     			$this->renderJson(USER_ADDRECORD_PROOVERMAX,'用户购买数量超过商品的最大预约数');
     		}else{
     			//添加预约信息
@@ -198,7 +198,7 @@ class UserController extends BaseController {
             $pro_info=$Product_obj->GetProductInfoByProid($info['product_id']);
             //判断该用户购买量是否超过预约总量
             if ($pro_info['pending_count']+$info['count']>$pro_info['max_reserver_number']) {
-
+                $info['sumprice']=$pro_info['sprice']*$info['count'];
                 $this->renderJson(USER_ADDRECORD_PROOVERMAX,'用户购买数量超过商品的最大预约数');
             }else{
                 //添加预约信息
@@ -249,6 +249,6 @@ $this->renderJson(USER_PAYBUYCAR_SUCCESS,'购物车付款成功');
              
            
         }
-
+789465
 
 }
