@@ -148,10 +148,11 @@ class UserController extends BaseController {
                 $Product_obj = new \Api\Model\ProductModel();
                 $pro_info=$Product_obj->GetProductInfoByProid($value['product_id']);
                 $returnArr[$key]=array('price'=>$pro_info['price'],'count'=>$value['count'],'product_id'=>$value['product_id'],'user_id'=>$value['user_id'],'product_name'=>$pro_info['product_name'],'image_url'=>$pro_info['image_url']);
-                $this->renderJson(USER_SHOWBUYCAR_SUCCESS,'购物车展示成功',$returnArr);
+                
             }}else{
                 $this->renderJson(USER_SHOWBUYCAR_SUCCESS,'购物车展示成功');
             }
+            $this->renderJson(USER_SHOWBUYCAR_SUCCESS,'购物车展示成功',$returnArr);
             
         }
         function showBuyCarCount(){
