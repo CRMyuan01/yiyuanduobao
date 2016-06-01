@@ -141,10 +141,7 @@ class UserController extends BaseController {
         function showBuyCar(){
             
             $info=array('user_id'=>$_REQUEST['uid']);
-<<<<<<< HEAD
-=======
 
->>>>>>> 9ddd3846e111ed1533046bd417fe25dad0a5863c
             $Buycar_obj = new \Api\Model\BuycarModel();
             $buycarInfo=$Buycar_obj->selectinfo(array('user_id'=>$info['user_id']));
             if($buycarInfo){
