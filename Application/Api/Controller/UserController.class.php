@@ -177,8 +177,8 @@ class UserController extends BaseController {
         function payOfBuyCar(){
             
       
-            $info=array('product_id'=>$_POST['proid'],'user_id'=>$_POST['uid']);
-
+            //$info=array('product_id'=>$_POST['proid'],'user_id'=>$_POST['uid']);
+ $info=array('product_id'=>'1000400,1000401','user_id'=>9);
             //获取需要结账的商品id
             $product_id=explode(',',$info['product_id']);
             $where=0;
@@ -209,11 +209,12 @@ class UserController extends BaseController {
             
             //获取商品信息
             $pro_info=$Product_obj->GetProductInfoByProid($info['product_id']);
+            $pro_info1['$key1']= $pro_info;
             //判断该用户购买量是否超过预约总量
             if ($pro_info['pending_count']+$info['count']>$pro_info['max_reserver_number']) {
                 
                 $this->renderJson(USER_ADDRECORD_PROOVERMAX,'用户购买数量超过商品的最大预约数');
-            }else{$delbuycarInfo=$Buycar_obj->delinfo($where);//删除购物车中该商品id的信息
+            }else{//$delbuycarInfo=$Buycar_obj->delinfo($where);//删除购物车中该商品id的信息
                 //添加预约信息
                 $info['sumprice']=$pro_info['sprice']*$info['count'];
                 $info['recordid']=time();
@@ -222,8 +223,8 @@ class UserController extends BaseController {
                     $proToUpdate['pending_count']=$pro_info['pending_count']+$info['count'];
                     //$proToUpdate['storage']=$pro_info['storage']-$info['count'];
                     $where='product_code='.$info['product_id'];
-                    $pro_info['sumprice']=$info['sumprice'];
-                    $pro_info['count']=$info['count'];
+                    $pro_info1['$key1']['sumprice']=$info['sumprice'];
+                    $pro_info1['$key1']['count']=$info['count'];
                     
                     //判断用户购买之后是否刚满预约总量,如果是更新字段status
                     if ($proToUpdate['pending_count']==$pro_info['max_reserver_number']) {
@@ -235,8 +236,7 @@ class UserController extends BaseController {
                 }
                 }
             }
-
-            $this->renderJson(USER_PAYBUYCAR_SUCCESS,'购物车付款成功',$pro_info,$info['recordid']);
+            $this->renderJson(USER_PAYBUYCAR_SUCCESS,'购物车付款成功',$pro_info1,$info['recordid']);
             }
             //通过recordid,userid返回商品信息
             function getInfoByRecordId(){
