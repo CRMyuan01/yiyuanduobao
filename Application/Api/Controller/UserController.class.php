@@ -107,7 +107,7 @@ class UserController extends BaseController {
     		
     		//获取商品信息
     		$pro_info=$Product_obj->getAllProduct($info['page']);
-           // var_dump($pro_info);die;
+
     		if ($pro_info) {
     			$this->renderJson(USER_SHOWPRODECT_SUCCESS,'所有商品获取成功',$pro_info);
     		}else{
@@ -251,12 +251,13 @@ class UserController extends BaseController {
                 foreach ($pro_info as $key => $value) {
                     $info=$Product_obj->GetProductInfoByProid($value['product_id']);
                     
-                    $pro_info[$key]['productinfo']=$info;
+                    $pro_info1[$key]=$info;
+                    $pro_info1[$key]['sumprice']=$value['sumprice'];
 
 
                 }
                 
-                $this->renderJson(USER_SHOWPRODECT_SUCCESS,'商品返回成功',$pro_info);
+                $this->renderJson(USER_SHOWPRODECT_SUCCESS,'商品返回成功',$pro_info1);
 
             }
                 
