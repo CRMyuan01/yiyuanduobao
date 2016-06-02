@@ -251,7 +251,7 @@ class UserController extends BaseController {
                 foreach ($pro_info as $key => $value) {
                     $info=$Product_obj->GetProductInfoByProid($value['product_id']);
                     
-                    $pro_info1[$key]=$info;
+                    $pro_info1[$key]=$pro_info;
                     $pro_info1[$key]['sumprice']=$value['sumprice'];
 
 
