@@ -6,9 +6,17 @@
         function addRecord($info){
         	$info['time']=date("Y-m-d H:i:s",time());
             $record_table=D('record');
+            
             $record_table->create($info);
             $a=$record_table->add();
             return $a;
+            
+        }
+        function GetProductInfoByRecordid($info){
+            $record_table=D('record');
+            $result=$record_table->where($info)->select();
+            
+            return $result;
             
         }
 
