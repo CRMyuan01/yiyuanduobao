@@ -192,7 +192,7 @@ class UserController extends BaseController {
 
               $Buycar_obj = new \Api\Model\BuycarModel();
             $buycarInfo=$Buycar_obj->selectinfo($where);//查询购物车中该商品id的信息
-            $delbuycarInfo=$Buycar_obj->delinfo($where);//删除购物车中该商品id的信息
+            
             $Record_obj = new \Api\Model\RecordModel();
             
 
@@ -212,7 +212,7 @@ class UserController extends BaseController {
             if ($pro_info['pending_count']+$info['count']>$pro_info['max_reserver_number']) {
                 
                 $this->renderJson(USER_ADDRECORD_PROOVERMAX,'用户购买数量超过商品的最大预约数');
-            }else{
+            }else{$delbuycarInfo=$Buycar_obj->delinfo($where);//删除购物车中该商品id的信息
                 //添加预约信息
                 $info['sumprice']=$pro_info['sprice']*$info['count'];
                 $info['recordid']=time();
