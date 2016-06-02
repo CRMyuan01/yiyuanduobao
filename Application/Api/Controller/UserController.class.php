@@ -176,7 +176,8 @@ class UserController extends BaseController {
 
         function payOfBuyCar(){
             
-            $info=array('product_id'=>'1000400,1000402','user_id'=>9);
+      
+            $info=array('product_id'=>$_POST['proid'],'user_id'=>$_POST['uid']);
 
             //获取需要结账的商品id
             $product_id=explode(',',$info['product_id']);
@@ -271,9 +272,9 @@ class UserController extends BaseController {
         }
         function deleteBuyCar(){
             
-            $productid="1000401,1000402";
+            $productid=$_POST['proids'];
             $ArrProductId=explode(",",$productid);
-            $userid=9;
+            $userid=$_POST['uid'];
             $Buycar_obj = new \Api\Model\BuycarModel();
             foreach($ArrProductId as $key=>$value){
             $Buycar_obj->delinfo('product_id="'.$value.'" and user_id="'.$userid.'"');
