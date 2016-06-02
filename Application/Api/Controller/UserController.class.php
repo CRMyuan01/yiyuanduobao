@@ -224,7 +224,7 @@ class UserController extends BaseController {
                     $where='product_code='.$info['product_id'];
                     $pro_info['sumprice']=$info['sumprice'];
                     $pro_info['count']=$info['count'];
-                    $pro_info['recordid']=$info['recordid'];
+                    
                     //判断用户购买之后是否刚满预约总量,如果是更新字段status
                     if ($proToUpdate['pending_count']==$pro_info['max_reserver_number']) {
                         $proToUpdate['status']=1;
@@ -236,7 +236,7 @@ class UserController extends BaseController {
                 }
             }
 
-            $this->renderJson(USER_PAYBUYCAR_SUCCESS,'购物车付款成功',$pro_info);
+            $this->renderJson(USER_PAYBUYCAR_SUCCESS,'购物车付款成功',$pro_info,$info['recordid']);
             }
             //通过recordid,userid返回商品信息
             function getInfoByRecordId(){
