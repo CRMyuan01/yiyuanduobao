@@ -178,7 +178,7 @@ class UserController extends BaseController {
             
       
             $info=array('product_id'=>$_POST['proid'],'user_id'=>$_POST['uid']);
- //$info=array('product_id'=>'1000400,1000399','user_id'=>9);
+
             //获取需要结账的商品id
             $product_id=explode(',',$info['product_id']);
             $where=0;
@@ -242,7 +242,7 @@ class UserController extends BaseController {
             }
             //通过recordid,userid返回商品信息
             function getInfoByRecordId(){
-                $info=array('recordid'=>'1464773338','user_id'=>9);
+                $info=array('recordid'=>$_POST['orderid'],'user_id'=>$_POST['uid']);
                 $Record_obj = new \Api\Model\RecordModel();
             
             //获取商品信息
