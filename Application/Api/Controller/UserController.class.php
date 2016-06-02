@@ -92,7 +92,7 @@ class UserController extends BaseController {
 					}
 					//更新商品信息
 					$Product_obj->UpdateProductInfo($proToUpdate,$where);
-					$this->renderJson(USER_ADDRECORD_SUCCESS,'用户购买成功',$info['recordid']);
+					$this->renderJson(USER_ADDRECORD_SUCCESS,'用户购买成功','',$info['recordid']);
 				}else{
 					$this->renderJson(USER_ADDRECORD_ERROR,'用户购买失败');
 				}
